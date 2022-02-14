@@ -1,33 +1,3 @@
-const assertArraysEqual = function(arrOne, arrTwo) {
-  let match;
-  for (let i = 0; i < arrOne.length; i++) {
-    if (arrOne[i] === arrTwo[i]) {
-      match = true;
-    } else {
-      match = false;
-      break;
-    }
-  }
-  if (match === true) {
-    console.log(`Assertion Passed: ${arrOne} === ${arrTwo}`);
-  } else {
-    console.log(`Assertion Failed: ${arrOne} !== ${arrTwo}`);
-  }
-};
-
-const eqArrays = function(arrOne, arrTwo) {
-  let match
-  for (let i = 0; i < arrOne.length; i++) {
-    if (arrOne[i] === arrTwo[i]) {
-      match = true
-    } else {
-      match = false
-      break
-    }
-  }
-  return match
-}
-
 const letterPositions = function(sentence) {
   const results = {};
   const split = sentence.split("")
@@ -47,4 +17,4 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-assertArraysEqual(letterPositions("lighthouse labs").e, [9])
+module.exports = letterPositions
