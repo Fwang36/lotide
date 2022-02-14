@@ -1,33 +1,3 @@
-const assertArraysEqual = function(arrOne, arrTwo) {
-  let match;
-  for (let i = 0; i < arrOne.length; i++) {
-    if (arrOne[i] === arrTwo[i]) {
-      match = true;
-    } else {
-      match = false;
-      break;
-    }
-  }
-  if (match === true) {
-    console.log(`Assertion Passed: ${arrOne} === ${arrTwo}`);
-  } else {
-    console.log(`Assertion Failed: ${arrOne} !== ${arrTwo}`);
-  }
-};
-
-const eqArrays = function(arrOne, arrTwo) {
-  let match
-  for (let i = 0; i < arrOne.length; i++) {
-    if (arrOne[i] === arrTwo[i]) {
-      match = true
-    } else {
-      match = false
-      break
-    }
-  }
-  return match
-}
-
 const middle = function (arr) {
   const result = []
   let mid = 0
@@ -42,4 +12,5 @@ const middle = function (arr) {
   return result
 }
 
-assertArraysEqual(middle([1,"2",3]),[2])
+
+module.exports = middle
